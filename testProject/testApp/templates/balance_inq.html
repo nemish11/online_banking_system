@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>for balance inquery</h1>
+   {{request.session.username}}
+    {% if bank_account_list %}
+    <ul>
+      {% for uname in bank_account_list %}
+          {% ifequal uname.user_id request.session.username %}
+             {{uname.user_id}}:
+             your account number is:{{uname.amount}}
+            {% endifequal %}
+      {% endfor %}
+      <br>
+    </ul>
+    {% else %}
+      <p>There are no user found.</p>
+    {% endif %}
+{% endblock %}

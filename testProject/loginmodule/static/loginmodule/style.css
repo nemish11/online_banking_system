@@ -1,0 +1,55 @@
+body {
+    background: white url("images/background.jpg") no-repeat;
+
+}
+
+h1
+{
+	color:purple;
+}
+
+h2
+{
+	color:white;
+}
+
+p
+{
+	color:yellow;
+}
+
+div.form
+{
+}
+div.form input,
+div.form textarea,
+div.form select
+{
+	margin: 0.2em 0 0.5em 0;
+	border:2;
+}
+
+div.form label
+{
+	font-weight: bold;
+	font-size: 1.5em;
+	display: block;
+	color: white;
+}
+
+div.form .row
+{
+	margin: 5px 0;
+}
+
+
+div.form div.success input,
+div.form div.success textarea,
+div.form div.success select,
+div.form input.success,
+div.form textarea.success,
+div.form select.success
+{
+	background: #E6EFC2;
+	border-color: #C6D880;
+}

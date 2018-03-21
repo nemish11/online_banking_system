@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>for transaction</h1>
+   {{request.session.username}}
+    {% if bank_account_list %}
+    <ul>
+      {% for uname in bank_account_list %}
+          {% ifequal uname.user_id request.session.username %}
+             {{uname.user_id}}:
+             your account number is:{{uname.account_no}}
+            {% endifequal %}
+      {% endfor %}
+      <br>
+      from account number:
+      <form action="/testApp/do_transaction" method="POST">{% csrf_token %}
+        <input type="text" name="from_account"/><br>
+        enter a amount:
+        <input type="text" name="amount1"/><br>
+        <input type="submit" value="submit"/>
+      </form>
+    </ul>
+    {% else %}
+      <p>There are no user found.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>welcome {{request.session.username}}!!
+      this is your history</h1>
+    {% if history_table %}
+    <ul>
+      {% for uname in bank_table %}
+          {% ifequal uname.user_id request.session.username %}
+             {%  for ac_no in history_table %}
+                {% ifequal uname.account_no ac_no.from_account_no %}
+                 {{ac_no.from_account_no}}--> {{ac_no.to_account_no}}     {{ ac_no.amount_transfer}}   {{ac_no.time}}</br>
+                 {% endifequal %}
+                 {% ifequal uname.account_no ac_no.to_account_no %}
+                  {{ac_no.from_account_no}}--> {{ac_no.to_account_no}}    {{ ac_no.amount_transfer}}   {{ac_no.time}}</br>
+                  {% endifequal %}
+            {% endfor %}
+            {% endifequal %}
+
+      {% endfor %}
+      <br>
+    </ul>
+    {% else %}
+      <p>There are no user found.</p>
+    {% endif %}
+{% endblock %}
