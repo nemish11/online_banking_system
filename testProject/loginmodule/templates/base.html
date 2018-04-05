@@ -1,16 +1,35 @@
-<!DOCTYPE html>
+{%load static%}
 <html>
-	<head>
-		<meta charset = "utf-8" >
-		<title>MyLogin!</title>
-	</head>
-	<body>
-		{% load static %}
+<head>
+	<title>{% block title %}{% endblock %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script src="{% static 'js/jquery-3.3.1.min.js' %}" ></script>
+	<link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" >
+	<script src="{% static 'js/materialize.min.js' %}" ></script>
 
-		<link rel="stylesheet" type="text/css" href="{% static '/loginmodule/style.css' %}" />
-		<h1 align="center">Django Login test !</h1>
+	<script src="{% static 'js/script.js' %}" ></script>
+	<style>
+body {
+    background-image: url("paper.gif");
+}
+</style>
+</head>
 
-		{% block content %}
-		{% endblock %}
-	</body>
+<body>
+	<nav>
+		<div class="nav-wrapper teal">
+			<a href="/loginmodule/loggedin/" class="brand-logo">Bank</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="/testApp/profile/">Profile</a></li>
+				<li><a href="/testApp/transaction/">Transaction</a></li>
+				<li><a href="/testApp/balance_inq/">Balance</a></li>
+				<li><a href="/testApp/history/">History</a></li>
+				<li><a href="/testApp/loan/">Loan</a></li>
+				<li><a href="/loginmodule/logout/">Log out</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	{% block content %}{% endblock %}
+</body>
 </html>

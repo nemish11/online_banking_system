@@ -1,13 +1,57 @@
-{% extends 'base.html' %}
-  {% block content %}
-   {% if form.errors %}
-      <p class="error">Invalid username or password </p>
-    {% endif %}
-  <form action="/loginmodule/auth/" method="post">{% csrf_token %}
-    <label for="username">user name:</label>
-    <input type="text" name="username" value="" id="username">
-    <label for="password">password:</label>
-    <input type="password" name="password" value="" id="password">
-    <input type="submit" value="login"/>
-  {% endblock %}
-  
+{% load static %}
+
+<html>
+	<head>
+		<title>{% block title %} {% endblock %}</title>
+		<!--<link rel="icon" href="imageset/favicon.png">-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link rel="stylesheet" href="{% static "css/materialize.min.css" %}">
+		<!--<link rel="stylesheet" href="{% static "css/style.css" %}">-->
+		<script src="{% static "js/jquery-3.3.1.min.js" %}"></script>
+		<script src="{% static "js/materialize.min.js" %}"></script>
+
+		<script src="{% static "js/script.js" %}"></script>
+	</head>
+
+	<body>
+    <nav>
+  		<div class="nav-wrapper teal">
+  			<a href="#" class="brand-logo">Online Banking</a>
+  			<ul id="nav-mobile" class="right hide-on-med-and-down">
+  				<li><a href="#">Home</a></li>
+  				<li><a href="https://retail.onlinesbi.com/sbijava/retail/html/aboutus.html">News</a></li>
+  				<li><a href="/loginmodule/contact_us/">Contact us</a></li>
+  				<li><a href="/loginmodule/about_us/">About us</a></li>
+  				<li><a href="https://retail.onlinesbi.com/personal/faq.html">FAQ</a></li>
+  			</ul>
+  		</div>
+  	</nav>
+    <div class="container center-align">
+      <h1>Login</h1>
+       <h5>{{msg}}</h5>
+			<div class="row">
+				<form action="/loginmodule/auth/" method="POST" class="col s12">{% csrf_token %}
+					<div class="row">
+						<div class="input-field col s6 offset-s3">
+							<i class="material-icons prefix">account_circle</i>
+		        	<input type="text" name="username" id="username" class="validate">
+							<label for="username">Username</label>
+						</div>
+						<div class="input-field col s6 offset-s3">
+							<i class="material-icons prefix">vpn_key</i>
+							<input type="password" name="password" class="validate" id="password">
+							<label for="password">Password</label>
+						</div>
+						<div class="input-field col s6 offset-s3">
+		        	<button type="submit" class="btn">Login</button>
+						</div>
+					</div>
+      	</form>
+			</div>
+    </div>
+
+</body>
+</html>

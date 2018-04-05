@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <h4>welcome  {{request.session.username}}!!<h4>
+    {% if bank_account_list %}
+    <ul><br>
+      <table class="bordered">
+        <thead>
+          <tr>
+              <th>account_no</th>
+              <th>   name   </th>
+              <th> username </th>
+              <th> balance  </th>
+              <th> email id </th>
+              <th> mobile no</th>
+          </tr>
+        </thead>
+      {% for uname in bank_account_list %}
+          {% ifequal uname.user_id request.session.username %}
+
+              <tbody>
+                <tr>
+                  <td>{{uname.account_no}}</td>
+                  <td>{{uname.name}}</td>
+                  <td>{{uname.user_id}}</td>
+                  <td>{{uname.amount}}</td>
+                  <td>{{uname.email_id}}</td>
+                  <td>{{uname.phone_no}}</td>
+                </tr>
+             </tbody>
+        </table>
+            {% endifequal %}
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no user found.</p>
+    {% endif %}
+{% endblock %}

@@ -18,12 +18,23 @@ def auth_view(request):
         request.session['username']=username
         return HttpResponseRedirect('/loginmodule/loggedin/')
     else:
-        return HttpResponseRedirect('/loginmodule/invalidlogin/')
+        c={}
+        c['msg']='Invalid username or password'
+        return render(request,'login.html',c)
+
 def loggedin(request):
-    #print('hii')
-    return render_to_response('loggedin.html',{"full_name":request.user.first_name})
+    return render_to_response('loggedin.html',{"full_name":request.user.username})
 def invalidlogin(request):
-    return render_to_response('invalidlogin.html')
+    c={}
+    c['msg']='Invalid username or password'
+    return render(request,'login.html',c)
 def logout(request):
-    auth.logout(request)
-    return render_to_response('logout.html')
+    c={}
+    c['msg']='you are Loggedout'
+    return render(request,'login.html',c)
+def about_us(request):
+    return render_to_response('about_us.html')
+def FAQ(request):
+    return render_to_response('FAQ.html')
+def contact_us(request):
+    return render_to_response('contact_us.html')

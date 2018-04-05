@@ -1,0 +1,1410 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!doctype html>
+<html>
+
+<head>
+ <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+ <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+ <meta content="utf-8" http-equiv="encoding">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>HDFC</title>
+ <link rel="icon" type="image/icon" href="./images/hdfc.ico">
+ <link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+ <link href="css/new/bootstrap.css" rel="stylesheet" type="text/css"/>
+ <link href="css/new/bootstrap-slider.css" rel="stylesheet" type="text/css"/>
+ <link href="css/new/font-awesome.css" rel="stylesheet" type="text/css"/>
+ <link href="css/new/formValidation.css" rel="stylesheet">
+ <link href="css/CampaignNewCustomer.css?v=10-01-2018.08" rel="stylesheet" type="text/css"/>
+
+ <script type="text/javascript" src="js/jquery.min.js">
+ </script>
+ <script type="text/javascript" src="js/jquery-ui.js"></script>
+ <script type="text/javascript" src="js/bootstrap.js"></script>
+ <script type="text/javascript" src="js/bootstrap-confirmation.min.js"></script>
+ <script type="text/javascript" src="js/bootstrap-slider.js"></script>
+ <script type="text/javascript" src="js/jquery.mask.js"></script>
+ <script type="text/javascript" src="js/formValidation.js"></script>
+ <script type="text/javascript" src="https://www.googleadservices.com/pagead/conversion_async.js" charset="utf-8"></script>
+ <script type="text/javascript" src="js/CampaignNewCustomer.js?v=10-01-2018.08"></script>
+ <!-- Google Tag Manager -->
+ <script>
+     ( function ( w, d, s, l, i ) {
+         w[ l ] = w[ l ] || [];
+         w[ l ].push( {
+             'gtm.start': new Date().getTime(),
+             event: 'gtm.js'
+         } );
+         var f = d.getElementsByTagName( s )[ 0 ],
+             j = d.createElement( s ),
+             dl = l != 'dataLayer' ? '&l=' + l : '';
+         j.async = true;
+         j.src =
+             'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+         f.parentNode.insertBefore( j, f );
+     } )( window, document, 'script', 'dataLayer', 'GTM-T89B72' );
+ </script>
+ <!-- End Google Tag Manager -->
+
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T89B72"
+               height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div class="main_banner">
+ <div class="logo_new"> <img src="images/campaign/logo_hdfc_2.png"> </div>
+ <div class="top_banner_content">
+     <h3> Wondering how much loan <br>
+         you are eligible for ? </h3>
+     <h4> Check your Home Loan Eligibility in 2 easy steps. </h4>
+     <div class="interest_box"> Home Loan for Women <br /> at 8.35%* p.a. onwards </div>
+ </div>
+</div>
+
+<div class="container">
+ <div class="row">
+     <div class="col-lg-4 content_left">
+         <div class="first_div_matter" id="first_add">
+             <div class="left_matter">
+                 <div class="box_add_rate flt_top">
+                     <div class="had_rate had_rate_red"> Current Home Loan Interest Rates </div>
+                     <div>
+                         <div class="had_rate_sec"> For Women* (Upto 75 lakhs) </div>
+                         <div class="had_rate_num"> 8.35% to 8.85% </div>
+                         <div class="had_rate_sec alt"> For Others* (Upto 75 lakhs) </div>
+                         <div class="had_rate_num alt"> 8.40% to 8.90% </div>
+                         <div class="had_rate_sec"> For Women* (Above 75 lakhs) </div>
+                         <div class="had_rate_num"> 8.40% to 8.90% </div>
+                         <div class="had_rate_sec alt"> For Others* (Above 75 lakhs) </div>
+                         <div class="had_rate_num alt"> 8.45% to 8.95% </div>
+                     </div>
+                 </div>
+                 <div class="point">
+                     <div class="point-head"> Why Choose HDFC Home Loans?  </div>
+                     <ul>
+                         <li> Attractive interest rates to make your Home Loans affordable and easier on your pocket.  </li>
+                         <li> Customized repayment options to suit your needs.  </li>
+                         <li> No hidden charges.  </li>
+                         <li> Expert legal and technical counseling to help you make the right home buying decision.  </li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+
+         <div class="second_div_matter" id="second_add" style="display:none;">
+             <div class="left_matter">
+                 <div class="tag_line mt_20"> Benefits of adding <br> Co-Applicants </div>
+                 <div class="sub_line"> You can add a maximum of 8 Co-Applicants </div>
+
+
+                 <div style="width: 100%; display: inline-block;">
+                     <div class="sel_round_opt mt_30">
+                         <div class="oter_round">
+                             <div class="sel_round_opt_num"> 1 </div>
+                         </div>
+                         <span class="sel_round_opt_txt"> More Loan Amount </span>
+                     </div>
+
+                     <div class="sel_round_opt mt_30">
+                         <div class="oter_round">
+                             <div class="sel_round_opt_num"> 2 </div>
+                         </div>
+                         <span class="sel_round_opt_txt"> Get Eligibility </span>
+                     </div>
+
+                     <div class="sel_round_opt mt_20">
+                         <div class="oter_round">
+                             <div class="sel_round_opt_num"> 3 </div>
+                         </div>
+                         <span class="sel_round_opt_txt"> More Loan Amount  </span>
+                     </div>
+
+                     <div class="sel_round_opt mt_20">
+                         <div class="oter_round">
+                             <div class="sel_round_opt_num"> 4 </div>
+                         </div>
+                         <span class="sel_round_opt_txt"> Get Eligibility </span>
+                     </div>
+                 </div>
+
+
+
+                 <div class="time_img"> <img src="images/campaign/timer_img.png" alt="HDFC Time"/> </div>
+
+
+             </div>
+
+         </div>
+
+     </div>
+
+
+     <div class="col-lg-6 content_right">
+
+         <div class="box">
+             <ul class="nav nav-tabs">
+                 <li class="cal active" id="li1"><a href="#home"> <span class="num"> 1 </span> <span class="per"> Personal </span></a>
+
+                     <div class="cssProgress">
+                         <div class="progress1">
+                             <div class="cssProgress-bar" data-percent="80">
+                                 <!-- <span class="cssProgress-label">80%</span> -->
+                             </div>
+                         </div>
+                     </div>
+
+                 </li>
+                 <li class="cal w38" id="li2"><a href="#coApplicantTab"><span class="num"> 2 </span> <span class="cop"> Co-Applicant </span> </a>
+
+                     <div class="cssProgress">
+                         <div class="progress2">
+                             <div class="cssProgress-bar" data-percent="80">
+                                 <!-- <span class="cssProgress-label">80%</span> -->
+                             </div>
+                         </div>
+                     </div>
+
+                 </li>
+                 <li class="cal" id="li3"><a href="#offerTab"><span class="num"> 3 </span> <span class="offer"> Offer </span></a>
+
+                     <div class="cssProgress">
+                         <div class="progress3">
+                             <div class="cssProgress-bar" data-percent="80">
+                                 <!-- <span class="cssProgress-label">80%</span> -->
+                             </div>
+                         </div>
+                     </div>
+
+                 </li>
+             </ul>
+             <div class="tab-content abj">
+                 <!-- personal tab start -->
+                 <div id="home" class="tab-pane active">
+                     <form id="frmPersonal" name="frmPersonal">
+                         <div class="row">
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mt20" style="display:none;">
+                                 <label>Loking for loan on</label>
+                                 <div class="btn-group" data-toggle="buttons">
+                                     <label class="btn active">
+                                         <input type="radio" id="new_property" name="loan_on" value="NEW" checked /><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  New Property</span>
+                                     </label>
+
+                                     <label class="btn">
+                                         <input type="radio" id="existing_property" name="loan_on" value="EXISTING" /><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> Existing Property</span>
+                                     </label>
+
+                                     <label class="btn">
+                                         <input type="radio" id="refinance" name="loan_on" value="REFINANCE" /><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> Refinance</span>
+                                     </label>
+
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mmt10">
+                                 <div class="form-group">
+                                     <label class="control-label" for="type">Loan Type</label>
+                                     <select class="form-control" id="loan_type" name="loan_type">
+                                         <option value=''> Select </option>
+                                                                                         <option value="HOU">
+                                                 Home Loans                                                </option>
+                                                                                         <option value="IMP">
+                                                 Home Improvement Loans                                                </option>
+                                                                                         <option value="EXT">
+                                                 Home Extension Loans                                                </option>
+                                                                                         <option value="LND">
+                                                 Plot Loans                                                </option>
+                                                                                 </select>
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 form-group" style="display:none;" id="short_listed_property_div">
+                                 <label class="control-label"> Have you shortlisted property? </label>
+                                 <div class="btn-group w100" data-toggle="buttons">
+                                     <label class="btn co_yn w50 mmr10" id="co_yn">
+                                         <input type="radio" id="pcyes" name="cm_property_selected" value="Y" /><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  Yes</span>
+                                     </label>
+
+                                     <label class="btn co_yn w50">
+                                         <input type="radio" id="pcno" name="cm_property_selected" value="N" /><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> No</span>
+                                     </label>
+
+                                 </div>
+                             </div>
+                             <!-- </div> -->
+
+                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12" id="short_listed_property">
+                                 <div class="form-group">
+                                     <label class="control-label hou_lnd_prop_label">Cost of Property</label>
+                                     <label class="control-label imp_prop_label" style="display:none;">Cost of Improvement</label>
+                                     <label class="control-label ext_prop_label" style="display:none;">Cost of Extension</label>
+                                     <input type="text" class="form-control mask-number-input" maxlength="12" id="cm_property_cost" name="cm_property_cost">
+                                 </div>
+                             </div>
+
+
+                             <div class="line"></div>
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 head_title"> <i class="fa fa-user mr8" aria-hidden="true" sstyle="margin-right: 3px;"></i> Applicant Details </div>
+
+
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 form-group">
+                                 <div class="form-group">
+                                     <label class="control-label">Name</label>
+                                     <input type="text" class="form-control" name="cm_cust_name" placeholder="Name">
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 form-group">
+                                 <label class="control-label"> Status of Residence </label>
+                                 <div class="btn-group w100" data-toggle="buttons">
+                                     <label class="btn active w50 mmr10">
+                                         <input type="radio" id="resi_type_res" name="resident_type" value="RES" checked ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  India </span>
+                                     </label>
+
+                                     <label class="btn w50">
+                                         <input type="radio" id="resi_type_nri" name="resident_type" value="NRI" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> NRI </span>
+                                     </label>
+
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 resstate">
+                                 <div class="form-group">
+                                     <label class="control-label" for="resident_state">State</label>
+                                     <select class="form-control" id="cm_resident_state" name="cm_resident_state">
+                                         <option value="">select</option>
+                                                                                         <option value="ANI">
+                                                 ANDAMAN AND NICOBAR ISLANDS                                                </option>
+                                                                                         <option value="AP">
+                                                 ANDHRA PRADESH                                                </option>
+                                                                                         <option value="ARP">
+                                                 ARUNACHAL PRADESH                                                </option>
+                                                                                         <option value="AS">
+                                                 ASSAM                                                </option>
+                                                                                         <option value="BI">
+                                                 BIHAR                                                </option>
+                                                                                         <option value="C">
+                                                 CHANDIGARH                                                </option>
+                                                                                         <option value="CHH">
+                                                 CHHATTISGARH                                                </option>
+                                                                                         <option value="DNH">
+                                                 DADRA AND NAGAR HAVELI                                                </option>
+                                                                                         <option value="DND">
+                                                 DAMAN AND DIU                                                </option>
+                                                                                         <option value="D">
+                                                 DELHI                                                </option>
+                                                                                         <option value="GOA">
+                                                 GOA                                                </option>
+                                                                                         <option value="GJ">
+                                                 GUJARAT                                                </option>
+                                                                                         <option value="HA">
+                                                 HARYANA                                                </option>
+                                                                                         <option value="HP">
+                                                 HIMACHAL PRADESH                                                </option>
+                                                                                         <option value="JK">
+                                                 JAMMU AND KASHMIR                                                </option>
+                                                                                         <option value="JHA">
+                                                 JHARKHAND                                                </option>
+                                                                                         <option value="KA">
+                                                 KARNATAKA                                                </option>
+                                                                                         <option value="KE">
+                                                 KERALA                                                </option>
+                                                                                         <option value="LK">
+                                                 LAKSHADWEEP                                                </option>
+                                                                                         <option value="MP">
+                                                 MADHYA PRADESH                                                </option>
+                                                                                         <option value="MS">
+                                                 MAHARASHTRA                                                </option>
+                                                                                         <option value="MA">
+                                                 MANIPUR                                                </option>
+                                                                                         <option value="ME">
+                                                 MEGHALAYA                                                </option>
+                                                                                         <option value="MI">
+                                                 MIZORAM                                                </option>
+                                                                                         <option value="NA">
+                                                 NAGALAND                                                </option>
+                                                                                         <option value="OR">
+                                                 ORISSA                                                </option>
+                                                                                         <option value="PO">
+                                                 PONDICHERRY                                                </option>
+                                                                                         <option value="PJ">
+                                                 PUNJAB                                                </option>
+                                                                                         <option value="RJ">
+                                                 RAJASTHAN                                                </option>
+                                                                                         <option value="SKM">
+                                                 SIKKIM                                                </option>
+                                                                                         <option value="TN">
+                                                 TAMIL NADU                                                </option>
+                                                                                         <option value="TL">
+                                                 TELANGANA                                                </option>
+                                                                                         <option value="TR">
+                                                 TRIPURA                                                </option>
+                                                                                         <option value="UP">
+                                                 UTTAR PRADESH                                                </option>
+                                                                                         <option value="UTT">
+                                                 UTTARANCHAL                                                </option>
+                                                                                         <option value="WB">
+                                                 WEST BENGAL                                                </option>
+                                                                                 </select>
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 rescity" style="display:none;">
+                                 <div class="form-group">
+                                     <label class="control-label" for="resident_city">City</label>
+                                     <input type="text" class="form-control" id="cm_resident_city" name="cm_resident_city">
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 nricountry" style="display:none;">
+                                 <div class="form-group">
+                                     <label class="control-label" for="resident_country">Country</label>
+                                     <select class="form-control" id="resident_country" name="resident_country">
+                                         <option value="">select</option>
+                                                                                         <option value="AUSTRALIA">
+                                                 AUSTRALIA                                                </option>
+                                                                                         <option value="BELGIUM">
+                                                 BELGIUM                                                </option>
+                                                                                         <option value="CANADA">
+                                                 CANADA                                                </option>
+                                                                                         <option value="CHINA">
+                                                 CHINA                                                </option>
+                                                                                         <option value="DENMARK">
+                                                 DENMARK                                                </option>
+                                                                                         <option value="FRANCE">
+                                                 FRANCE                                                </option>
+                                                                                         <option value="GERMANY">
+                                                 GERMANY                                                </option>
+                                                                                         <option value="HONG KONG">
+                                                 HONG KONG                                                </option>
+                                                                                         <option value="INDONESIA">
+                                                 INDONESIA                                                </option>
+                                                                                         <option value="ITALY">
+                                                 ITALY                                                </option>
+                                                                                         <option value="JAPAN">
+                                                 JAPAN                                                </option>
+                                                                                         <option value="KUWAIT">
+                                                 KUWAIT                                                </option>
+                                                                                         <option value="MALAYSIA">
+                                                 MALAYSIA                                                </option>
+                                                                                         <option value="NETHERLANDS">
+                                                 NETHERLANDS                                                </option>
+                                                                                         <option value="NEW ZEALAND">
+                                                 NEW ZEALAND                                                </option>
+                                                                                         <option value="OMAN">
+                                                 OMAN                                                </option>
+                                                                                         <option value="OTHER">
+                                                 OTHER                                                </option>
+                                                                                         <option value="QATAR">
+                                                 QATAR                                                </option>
+                                                                                         <option value="RUSSIA">
+                                                 RUSSIA                                                </option>
+                                                                                         <option value="SAUDI ARABIA">
+                                                 SAUDI ARABIA                                                </option>
+                                                                                         <option value="SINGAPORE">
+                                                 SINGAPORE                                                </option>
+                                                                                         <option value="SPAIN">
+                                                 SPAIN                                                </option>
+                                                                                         <option value="SWITZERLAND">
+                                                 SWITZERLAND                                                </option>
+                                                                                         <option value="UAE">
+                                                 UAE                                                </option>
+                                                                                         <option value="UK">
+                                                 UK                                                </option>
+                                                                                         <option value="USA">
+                                                 USA                                                </option>
+                                                                                 </select>
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 mprl nriothercountry" style="display:none;">
+                                 <div class="form-group">
+                                     <label class="control-label"> Country Name </label>
+                                     <input type="text" class="form-control" maxlength="30" id="other_country" name="other_country">
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 form-group">
+                                 <label class="control-label"> Gender </label>
+                                 <div class="btn-group w100" data-toggle="buttons">
+                                     <label class="btn active w50 mmr10">
+                                         <input type="radio" id="gender_m" name="gender" value="M" checked ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  Male</span>
+                                     </label>
+
+                                     <label class="btn w50">
+                                         <input type="radio" id="gender_f" name="gender" value="F" ><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> Female</span>
+                                     </label>
+
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 mprl">
+                                 <div class="form-group">
+                                     <label class="control-label"> Age </label>
+                                     <input type="text" class="form-control" maxlength="2" id="age" name="age"/>
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mprl">
+                                 <div class="form-group">
+                                     <label class="control-label">Employment Type</label>
+                                     <select class="form-control" id="employment_type" name="employment_type">
+                                         <option value="">select</option>
+                                                                                         <option value="E">
+                                                 EMPLOYED                                                </option>
+                                                                                         <option value="H">
+                                                 HOUSEWIFE                                                </option>
+                                                                                         <option value="O">
+                                                 RETIRED                                                </option>
+                                                                                         <option value="S">
+                                                 SELF EMPLOYED                                                </option>
+                                                                                         <option value="D">
+                                                 STUDENT                                                </option>
+                                                                                 </select>
+                                 </div>
+                             </div>
+
+                             <div id="salaried">
+                                 <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 mpr15 mmt5 pr">
+                                     <div class="form-group">
+                                         <label class="control-label">Monthly Income</label>
+                                         <input type="text" class="form-control mask-number-input" maxlength="11" id="monthly_income" name="monthly_income">
+                                     </div>
+                                 </div>
+
+                                 <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 mpr15 pr">
+                                     <div class="form-group">
+                                         <label class="control-label">Other EMIs</label>
+                                         <input type="text" class="form-control mask-number-input" maxlength="11" id="current_emi" name="current_emi">
+                                     </div>
+                                 </div>
+
+                                 <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                                     <div class="form-group">
+                                         <label class="control-label">Retiring Age</label>
+                                         <select class="form-control" id="retirement_age" name="retirement_age">
+                                             <option value="">select</option>
+                                                                                                 <option value="55">
+                                                     55                                                    </option>
+                                                                                                 <option value="56">
+                                                     56                                                    </option>
+                                                                                                 <option value="57">
+                                                     57                                                    </option>
+                                                                                                 <option value="58">
+                                                     58                                                    </option>
+                                                                                                 <option value="59">
+                                                     59                                                    </option>
+                                                                                                 <option value="60">
+                                                     60                                                    </option>
+                                                                                                 <option value="61">
+                                                     61                                                    </option>
+                                                                                                 <option value="62">
+                                                     62                                                    </option>
+                                                                                                 <option value="63">
+                                                     63                                                    </option>
+                                                                                                 <option value="64">
+                                                     64                                                    </option>
+                                                                                                 <option value="65">
+                                                     65                                                    </option>
+                                                                                         </select>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mmt5">
+                                 <div class="form-group">
+                                     <label class="control-label">Email ID</label>
+                                     <input type="text" class="form-control" placeholder="Email Id" id="cm_email_id" name="cm_email_id">
+                                 </div>
+                             </div>
+
+
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                 <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 pr pl">
+                                     <div class="form-group">
+                                         <label class="control-label">Mobile Number  </label>
+                                         <select class="form-control" name="cm_mobile_code">
+                                             <option value="">- - Select - -</option>
+                                                                                                 <option value="93"  >
+                                                     Afghanistan (93)                                                    </option>
+                                                                                                 <option value="355"  >
+                                                     Albania (355)                                                    </option>
+                                                                                                 <option value="213"  >
+                                                     Algeria (213)                                                    </option>
+                                                                                                 <option value="684"  >
+                                                     American Samoa (684)                                                    </option>
+                                                                                                 <option value="376"  >
+                                                     Andorra (376)                                                    </option>
+                                                                                                 <option value="244"  >
+                                                     Angola (244)                                                    </option>
+                                                                                                 <option value="672"  >
+                                                     Antarctica (672)                                                    </option>
+                                                                                                 <option value="54"  >
+                                                     Argentina (54)                                                    </option>
+                                                                                                 <option value="374"  >
+                                                     Armenia (374)                                                    </option>
+                                                                                                 <option value="297"  >
+                                                     Aruba (297)                                                    </option>
+                                                                                                 <option value="61"  >
+                                                     Australia (61)                                                    </option>
+                                                                                                 <option value="43"  >
+                                                     Austria (43)                                                    </option>
+                                                                                                 <option value="994"  >
+                                                     Azerbaijan (994)                                                    </option>
+                                                                                                 <option value="973"  >
+                                                     Bahrain (973)                                                    </option>
+                                                                                                 <option value="880"  >
+                                                     Bangladesh (880)                                                    </option>
+                                                                                                 <option value="375"  >
+                                                     Belarus (375)                                                    </option>
+                                                                                                 <option value="32"  >
+                                                     Belgium (32)                                                    </option>
+                                                                                                 <option value="501"  >
+                                                     Belize (501)                                                    </option>
+                                                                                                 <option value="229"  >
+                                                     Benin (229)                                                    </option>
+                                                                                                 <option value="975"  >
+                                                     Bhutan (975)                                                    </option>
+                                                                                                 <option value="591"  >
+                                                     Bolivia (591)                                                    </option>
+                                                                                                 <option value="387"  >
+                                                     Bosnia-Herzegovina (387)                                                    </option>
+                                                                                                 <option value="267"  >
+                                                     Botswana (267)                                                    </option>
+                                                                                                 <option value="55"  >
+                                                     Brazil (55)                                                    </option>
+                                                                                                 <option value="673"  >
+                                                     Brunei Darussalam (673)                                                    </option>
+                                                                                                 <option value="359"  >
+                                                     Bulgaria (359)                                                    </option>
+                                                                                                 <option value="226"  >
+                                                     Burkina Faso (226)                                                    </option>
+                                                                                                 <option value="257"  >
+                                                     Burundi (257)                                                    </option>
+                                                                                                 <option value="855"  >
+                                                     Cambodia (855)                                                    </option>
+                                                                                                 <option value="237"  >
+                                                     Cameroon (237)                                                    </option>
+                                                                                                 <option value="1"  >
+                                                     Canada (1)                                                    </option>
+                                                                                                 <option value="238"  >
+                                                     Cape Verde (238)                                                    </option>
+                                                                                                 <option value="236"  >
+                                                     Central African Republic (236)                                                    </option>
+                                                                                                 <option value="235"  >
+                                                     Chad (235)                                                    </option>
+                                                                                                 <option value="56"  >
+                                                     Chile (56)                                                    </option>
+                                                                                                 <option value="86"  >
+                                                     China (86)                                                    </option>
+                                                                                                 <option value="61"  >
+                                                     Christmas Island (61)                                                    </option>
+                                                                                                 <option value="61"  >
+                                                     Cocos (Keeling) Islands (61)                                                    </option>
+                                                                                                 <option value="57"  >
+                                                     Colombia (57)                                                    </option>
+                                                                                                 <option value="269"  >
+                                                     Comoros (269)                                                    </option>
+                                                                                                 <option value="242"  >
+                                                     Congo (242)                                                    </option>
+                                                                                                 <option value="243"  >
+                                                     Congo, Dem. Republic (243)                                                    </option>
+                                                                                                 <option value="682"  >
+                                                     Cook Islands (682)                                                    </option>
+                                                                                                 <option value="506"  >
+                                                     Costa Rica (506)                                                    </option>
+                                                                                                 <option value="385"  >
+                                                     Croatia (385)                                                    </option>
+                                                                                                 <option value="53"  >
+                                                     Cuba (53)                                                    </option>
+                                                                                                 <option value="357"  >
+                                                     Cyprus (357)                                                    </option>
+                                                                                                 <option value="420"  >
+                                                     Czech Rep. (420)                                                    </option>
+                                                                                                 <option value="45"  >
+                                                     Denmark (45)                                                    </option>
+                                                                                                 <option value="253"  >
+                                                     Djibouti (253)                                                    </option>
+                                                                                                 <option value="809"  >
+                                                     Dominican Republic (809)                                                    </option>
+                                                                                                 <option value="593"  >
+                                                     Ecuador (593)                                                    </option>
+                                                                                                 <option value="20"  >
+                                                     Egypt (20)                                                    </option>
+                                                                                                 <option value="503"  >
+                                                     El Salvador (503)                                                    </option>
+                                                                                                 <option value="240"  >
+                                                     Equatorial Guinea (240)                                                    </option>
+                                                                                                 <option value="291"  >
+                                                     Eritrea (291)                                                    </option>
+                                                                                                 <option value="372"  >
+                                                     Estonia (372)                                                    </option>
+                                                                                                 <option value="251"  >
+                                                     Ethiopia (251)                                                    </option>
+                                                                                                 <option value="500"  >
+                                                     Falkland Islands (Malvinas) (500)                                                    </option>
+                                                                                                 <option value="298"  >
+                                                     Faroe Islands (298)                                                    </option>
+                                                                                                 <option value="679"  >
+                                                     Fiji (679)                                                    </option>
+                                                                                                 <option value="358"  >
+                                                     Finland (358)                                                    </option>
+                                                                                                 <option value="33"  >
+                                                     France (33)                                                    </option>
+                                                                                                 <option value="594"  >
+                                                     French Guiana (594)                                                    </option>
+                                                                                                 <option value="241"  >
+                                                     Gabon (241)                                                    </option>
+                                                                                                 <option value="220"  >
+                                                     Gambia (220)                                                    </option>
+                                                                                                 <option value="995"  >
+                                                     Georgia (995)                                                    </option>
+                                                                                                 <option value="49"  >
+                                                     Germany (49)                                                    </option>
+                                                                                                 <option value="233"  >
+                                                     Ghana (233)                                                    </option>
+                                                                                                 <option value="350"  >
+                                                     Gibraltar (350)                                                    </option>
+                                                                                                 <option value="44"  >
+                                                     Great Britain (44)                                                    </option>
+                                                                                                 <option value="30"  >
+                                                     Greece (30)                                                    </option>
+                                                                                                 <option value="299"  >
+                                                     Greenland (299)                                                    </option>
+                                                                                                 <option value="590"  >
+                                                     Guadeloupe (French) (590)                                                    </option>
+                                                                                                 <option value="502"  >
+                                                     Guatemala (502)                                                    </option>
+                                                                                                 <option value="224"  >
+                                                     Guinea (224)                                                    </option>
+                                                                                                 <option value="245"  >
+                                                     Guinea Bissau (245)                                                    </option>
+                                                                                                 <option value="592"  >
+                                                     Guyana (592)                                                    </option>
+                                                                                                 <option value="509"  >
+                                                     Haiti (509)                                                    </option>
+                                                                                                 <option value="504"  >
+                                                     Honduras (504)                                                    </option>
+                                                                                                 <option value="852"  >
+                                                     Hong Kong (852)                                                    </option>
+                                                                                                 <option value="36"  >
+                                                     Hungary (36)                                                    </option>
+                                                                                                 <option value="354"  >
+                                                     Iceland (354)                                                    </option>
+                                                                                                 <option value="91" selected >
+                                                     India (91)                                                    </option>
+                                                                                                 <option value="62"  >
+                                                     Indonesia (62)                                                    </option>
+                                                                                                 <option value="98"  >
+                                                     Iran (98)                                                    </option>
+                                                                                                 <option value="964"  >
+                                                     Iraq (964)                                                    </option>
+                                                                                                 <option value="353"  >
+                                                     Ireland (353)                                                    </option>
+                                                                                                 <option value="972"  >
+                                                     Israel (972)                                                    </option>
+                                                                                                 <option value="39"  >
+                                                     Italy (39)                                                    </option>
+                                                                                                 <option value="225"  >
+                                                     Ivory Coast (225)                                                    </option>
+                                                                                                 <option value="81"  >
+                                                     Japan (81)                                                    </option>
+                                                                                                 <option value="962"  >
+                                                     Jordan (962)                                                    </option>
+                                                                                                 <option value="7"  >
+                                                     Kazakhstan (7)                                                    </option>
+                                                                                                 <option value="254"  >
+                                                     Kenya (254)                                                    </option>
+                                                                                                 <option value="686"  >
+                                                     Kiribati (686)                                                    </option>
+                                                                                                 <option value="850"  >
+                                                     Korea-North (850)                                                    </option>
+                                                                                                 <option value="82"  >
+                                                     Korea-South (82)                                                    </option>
+                                                                                                 <option value="965"  >
+                                                     Kuwait (965)                                                    </option>
+                                                                                                 <option value="996"  >
+                                                     Kyrgyzstan (996)                                                    </option>
+                                                                                                 <option value="856"  >
+                                                     Laos (856)                                                    </option>
+                                                                                                 <option value="371"  >
+                                                     Latvia (371)                                                    </option>
+                                                                                                 <option value="961"  >
+                                                     Lebanon (961)                                                    </option>
+                                                                                                 <option value="266"  >
+                                                     Lesotho (266)                                                    </option>
+                                                                                                 <option value="231"  >
+                                                     Liberia (231)                                                    </option>
+                                                                                                 <option value="218"  >
+                                                     Libya (218)                                                    </option>
+                                                                                                 <option value="423"  >
+                                                     Liechtenstein (423)                                                    </option>
+                                                                                                 <option value="370"  >
+                                                     Lithuania (370)                                                    </option>
+                                                                                                 <option value="352"  >
+                                                     Luxembourg (352)                                                    </option>
+                                                                                                 <option value="853"  >
+                                                     Macau (853)                                                    </option>
+                                                                                                 <option value="389"  >
+                                                     Macedonia (389)                                                    </option>
+                                                                                                 <option value="261"  >
+                                                     Madagascar (261)                                                    </option>
+                                                                                                 <option value="265"  >
+                                                     Malawi (265)                                                    </option>
+                                                                                                 <option value="60"  >
+                                                     Malaysia (60)                                                    </option>
+                                                                                                 <option value="960"  >
+                                                     Maldives (960)                                                    </option>
+                                                                                                 <option value="223"  >
+                                                     Mali (223)                                                    </option>
+                                                                                                 <option value="356"  >
+                                                     Malta (356)                                                    </option>
+                                                                                                 <option value="692"  >
+                                                     Marshall Islands (692)                                                    </option>
+                                                                                                 <option value="596"  >
+                                                     Martinique (French) (596)                                                    </option>
+                                                                                                 <option value="222"  >
+                                                     Mauritania (222)                                                    </option>
+                                                                                                 <option value="230"  >
+                                                     Mauritius (230)                                                    </option>
+                                                                                                 <option value="269"  >
+                                                     Mayotte (269)                                                    </option>
+                                                                                                 <option value="52"  >
+                                                     Mexico (52)                                                    </option>
+                                                                                                 <option value="691"  >
+                                                     Micronesia (691)                                                    </option>
+                                                                                                 <option value="373"  >
+                                                     Moldova (373)                                                    </option>
+                                                                                                 <option value="377"  >
+                                                     Monaco (377)                                                    </option>
+                                                                                                 <option value="976"  >
+                                                     Mongolia (976)                                                    </option>
+                                                                                                 <option value="382"  >
+                                                     Montenegro (382)                                                    </option>
+                                                                                                 <option value="212"  >
+                                                     Morocco (212)                                                    </option>
+                                                                                                 <option value="258"  >
+                                                     Mozambique (258)                                                    </option>
+                                                                                                 <option value="95"  >
+                                                     Myanmar (95)                                                    </option>
+                                                                                                 <option value="264"  >
+                                                     Namibia (264)                                                    </option>
+                                                                                                 <option value="674"  >
+                                                     Nauru (674)                                                    </option>
+                                                                                                 <option value="977"  >
+                                                     Nepal (977)                                                    </option>
+                                                                                                 <option value="31"  >
+                                                     Netherlands (31)                                                    </option>
+                                                                                                 <option value="599"  >
+                                                     Netherlands Antilles (599)                                                    </option>
+                                                                                                 <option value="687"  >
+                                                     New Caledonia (French) (687)                                                    </option>
+                                                                                                 <option value="64"  >
+                                                     New Zealand (64)                                                    </option>
+                                                                                                 <option value="505"  >
+                                                     Nicaragua (505)                                                    </option>
+                                                                                                 <option value="227"  >
+                                                     Niger (227)                                                    </option>
+                                                                                                 <option value="234"  >
+                                                     Nigeria (234)                                                    </option>
+                                                                                                 <option value="683"  >
+                                                     Niue (683)                                                    </option>
+                                                                                                 <option value="672"  >
+                                                     Norfolk Island (672)                                                    </option>
+                                                                                                 <option value="670"  >
+                                                     Northern Mariana Islands (670)                                                    </option>
+                                                                                                 <option value="47"  >
+                                                     Norway (47)                                                    </option>
+                                                                                                 <option value="968"  >
+                                                     Oman (968)                                                    </option>
+                                                                                                 <option value="680"  >
+                                                     Palau (680)                                                    </option>
+                                                                                                 <option value="507"  >
+                                                     Panama (507)                                                    </option>
+                                                                                                 <option value="675"  >
+                                                     Papua New Guinea (675)                                                    </option>
+                                                                                                 <option value="595"  >
+                                                     Paraguay (595)                                                    </option>
+                                                                                                 <option value="51"  >
+                                                     Peru (51)                                                    </option>
+                                                                                                 <option value="63"  >
+                                                     Philippines (63)                                                    </option>
+                                                                                                 <option value="48"  >
+                                                     Poland (48)                                                    </option>
+                                                                                                 <option value="689"  >
+                                                     Polynesia (French) (689)                                                    </option>
+                                                                                                 <option value="351"  >
+                                                     Portugal (351)                                                    </option>
+                                                                                                 <option value="974"  >
+                                                     Qatar (974)                                                    </option>
+                                                                                                 <option value="262"  >
+                                                     Reunion (French) (262)                                                    </option>
+                                                                                                 <option value="40"  >
+                                                     Romania (40)                                                    </option>
+                                                                                                 <option value="7"  >
+                                                     Russia (7)                                                    </option>
+                                                                                                 <option value="250"  >
+                                                     Rwanda (250)                                                    </option>
+                                                                                                 <option value="290"  >
+                                                     Saint Helena (290)                                                    </option>
+                                                                                                 <option value="508"  >
+                                                     Saint Pierre and Miquelon (508)                                                    </option>
+                                                                                                 <option value="684"  >
+                                                     Samoa (684)                                                    </option>
+                                                                                                 <option value="378"  >
+                                                     San Marino (378)                                                    </option>
+                                                                                                 <option value="239"  >
+                                                     Sao Tome and Principe (239)                                                    </option>
+                                                                                                 <option value="966"  >
+                                                     Saudi Arabia (966)                                                    </option>
+                                                                                                 <option value="221"  >
+                                                     Senegal (221)                                                    </option>
+                                                                                                 <option value="381"  >
+                                                     Serbia (381)                                                    </option>
+                                                                                                 <option value="248"  >
+                                                     Seychelles (248)                                                    </option>
+                                                                                                 <option value="232"  >
+                                                     Sierra Leone (232)                                                    </option>
+                                                                                                 <option value="65"  >
+                                                     Singapore (65)                                                    </option>
+                                                                                                 <option value="421"  >
+                                                     Slovakia (421)                                                    </option>
+                                                                                                 <option value="386"  >
+                                                     Slovenia (386)                                                    </option>
+                                                                                                 <option value="677"  >
+                                                     Solomon Islands (677)                                                    </option>
+                                                                                                 <option value="252"  >
+                                                     Somalia (252)                                                    </option>
+                                                                                                 <option value="27"  >
+                                                     South Africa (27)                                                    </option>
+                                                                                                 <option value="34"  >
+                                                     Spain (34)                                                    </option>
+                                                                                                 <option value="94"  >
+                                                     Sri Lanka (94)                                                    </option>
+                                                                                                 <option value="249"  >
+                                                     Sudan (249)                                                    </option>
+                                                                                                 <option value="597"  >
+                                                     Suriname (597)                                                    </option>
+                                                                                                 <option value="268"  >
+                                                     Swaziland (268)                                                    </option>
+                                                                                                 <option value="46"  >
+                                                     Sweden (46)                                                    </option>
+                                                                                                 <option value="41"  >
+                                                     Switzerland (41)                                                    </option>
+                                                                                                 <option value="963"  >
+                                                     Syria (963)                                                    </option>
+                                                                                                 <option value="886"  >
+                                                     Taiwan (886)                                                    </option>
+                                                                                                 <option value="992"  >
+                                                     Tajikistan (992)                                                    </option>
+                                                                                                 <option value="255"  >
+                                                     Tanzania (255)                                                    </option>
+                                                                                                 <option value="66"  >
+                                                     Thailand (66)                                                    </option>
+                                                                                                 <option value="228"  >
+                                                     Togo (228)                                                    </option>
+                                                                                                 <option value="690"  >
+                                                     Tokelau (690)                                                    </option>
+                                                                                                 <option value="676"  >
+                                                     Tonga (676)                                                    </option>
+                                                                                                 <option value="216"  >
+                                                     Tunisia (216)                                                    </option>
+                                                                                                 <option value="90"  >
+                                                     Turkey (90)                                                    </option>
+                                                                                                 <option value="993"  >
+                                                     Turkmenistan (993)                                                    </option>
+                                                                                                 <option value="688"  >
+                                                     Tuvalu (688)                                                    </option>
+                                                                                                 <option value="44"  >
+                                                     U.K. (44)                                                    </option>
+                                                                                                 <option value="1"  >
+                                                     USA (1)                                                    </option>
+                                                                                                 <option value="256"  >
+                                                     Uganda (256)                                                    </option>
+                                                                                                 <option value="380"  >
+                                                     Ukraine (380)                                                    </option>
+                                                                                                 <option value="971"  >
+                                                     United Arab Emirates (971)                                                    </option>
+                                                                                                 <option value="598"  >
+                                                     Uruguay (598)                                                    </option>
+                                                                                                 <option value="998"  >
+                                                     Uzbekistan (998)                                                    </option>
+                                                                                                 <option value="678"  >
+                                                     Vanuatu (678)                                                    </option>
+                                                                                                 <option value="39"  >
+                                                     Vatican (39)                                                    </option>
+                                                                                                 <option value="58"  >
+                                                     Venezuela (58)                                                    </option>
+                                                                                                 <option value="84"  >
+                                                     Vietnam (84)                                                    </option>
+                                                                                                 <option value="681"  >
+                                                     Wallis and Futuna Islands (681)                                                    </option>
+                                                                                                 <option value="967"  >
+                                                     Yemen (967)                                                    </option>
+                                                                                                 <option value="260"  >
+                                                     Zambia (260)                                                    </option>
+                                                                                                 <option value="263"  >
+                                                     Zimbabwe (263)                                                    </option>
+                                                                                         </select>
+                                     </div>
+                                 </div>
+
+                                 <div class="col-lg-8 col-sm-8 col-md-8 col-xs-12 pr pl">
+                                     <div class="form-group">
+                                         <label class="mhide"> &nbsp;</label>
+                                         <input type="text" class="form-control" maxlength="10" placeholder="Mobile Number" id="cm_mobile_no" name="cm_mobile_no">
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mtmb">
+                                 <div class="checkbox checkbox-danger">
+                                     <input type="checkbox" id="check1" name="cm_check" checked="checked" />
+                                     <label class="text_info" for="check1">
+                                         I authorize HDFC & its representatives to call me or SMS me with reference to my application.This consent will override any registration for DNC / NDNC. Credit at the sole discretion of HDFC LTD.
+                                     </label>
+
+                                 </div>
+                             </div>
+
+
+
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 text-center mt30 mt20">
+                                 <button class="button_effect btn_1 txt" id="btn-personal-continue"> <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i>  CONTINUE <i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i></button>
+                             </div>
+                         </div>
+                     </form>
+                 </div>
+                 <!-- personal tab End -->
+
+                 <!-- Co app tab start -->
+                 <div id="coApplicantTab" class="tab-pane">
+                     <form id="frmCoApplicant" name="frmCoApplicant">
+                         <div class="row">
+                             <div class="coAppYesNo mb17 col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                 <div class=" col-lg-6 col-sm-6 col-md-6 col-xs-12 plr">
+                                     <label class="note_adj">Do you have a Co-Applicant?<br>
+                                         <span class="note">You can add a max of 8 co-applicants</span></label>
+                                 </div>
+
+                                 <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 plr">
+                                     <div class="btn-group w100" data-toggle="buttons">
+                                         <label class="btn co_yn w50 mmr10" id="co_yn">
+                                             <input type="radio" id="CAyes" class="co_yn" name="co_applicants_yn" value="Y" /><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  Yes</span>
+                                         </label>
+
+                                         <label class="btn active co_yn w50">
+                                             <input type="radio" id="CAno" class="co_yn" name="co_applicants_yn" value="N" checked /><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> No</span>
+                                         </label>
+
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <input type="hidden" id="totCoApp" name="totCoApp" value="1">
+
+                             <div class="row mrml float" id="co_applicants">
+                                 <div id="coAppTemplateMain" class="box_co_app">
+                                     <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 pl pr co-app-template" data-coApp-index='0' id="coAppTemplate">
+                                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 head_title red"> Co-Applicant <span class="coCount"></span>
+                                             <span class="remove removeButton" style="display:none;" id="btnRemoveCoApp_0" data-toggle="confirmation" data-placement="left" data-singleton="true" data-popout="true" data-title="Are you sure to delete co-applicant?"> REMOVE
+                         </span>
+                                         </div>
+
+                                         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                                             <div class="form-group">
+                                                 <label class="control-label" for="co_relationship_0">Relationship</label>
+                                                 <select class="form-control" id="co_relationship_0" name="co_relationship_0">
+                                                     <option value="">Select</option>
+                                                                                                                 <option value="B">
+                                                             BROTHER                                                            </option>
+                                                                                                                 <option value="D">
+                                                             DAUGHTER                                                            </option>
+                                                                                                                 <option value="DIL">
+                                                             DAUGHTER IN LAW                                                            </option>
+                                                                                                                 <option value="F">
+                                                             FATHER                                                            </option>
+                                                                                                                 <option value="FIL">
+                                                             FATHER IN LAW                                                            </option>
+                                                                                                                 <option value="FE">
+                                                             FIANCE                                                            </option>
+                                                                                                                 <option value="FR">
+                                                             FRIEND                                                            </option>
+                                                                                                                 <option value="H">
+                                                             HUSBAND                                                            </option>
+                                                                                                                 <option value="M">
+                                                             MOTHER                                                            </option>
+                                                                                                                 <option value="MIL">
+                                                             MOTHER IN LAW                                                            </option>
+                                                                                                                 <option value="PA">
+                                                             PARTNER                                                            </option>
+                                                                                                                 <option value="S">
+                                                             SISTER                                                            </option>
+                                                                                                                 <option value="SN">
+                                                             SON                                                            </option>
+                                                                                                                 <option value="SNL">
+                                                             SON IN LAW                                                            </option>
+                                                                                                                 <option value="W">
+                                                             WIFE                                                            </option>
+                                                                                                         </select>
+                                             </div>
+                                         </div>
+
+                                         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                                             <div class="form-group">
+                                                 <label class="control-label">Status of Residence</label>
+                                                 <div class="btn-group w100" data-toggle="buttons">
+                                                     <label class="btn w50 mmr10 active">
+                                                         <input type="radio" value="RES" class="co_resident_type" name="co_resident_type_0" checked /><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  India</span>
+                                                     </label>
+
+                                                     <label class="btn w50">
+                                                         <input type="radio" value="NRI" class="co_resident_type" name="co_resident_type_0" /><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> NRI</span>
+                                                     </label>
+
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 nricountry" style="display:none;">
+                                             <div class="form-group">
+                                                 <label class="control-label" for="co_resident_country_0">Country</label>
+                                                 <select class="form-control co_resident_country" id="co_resident_country_0" name="co_resident_country_0">
+                                                     <option value="">select</option>
+                                                                                                                 <option value="AUSTRALIA">
+                                                             AUSTRALIA                                                            </option>
+                                                                                                                 <option value="BELGIUM">
+                                                             BELGIUM                                                            </option>
+                                                                                                                 <option value="CANADA">
+                                                             CANADA                                                            </option>
+                                                                                                                 <option value="CHINA">
+                                                             CHINA                                                            </option>
+                                                                                                                 <option value="DENMARK">
+                                                             DENMARK                                                            </option>
+                                                                                                                 <option value="FRANCE">
+                                                             FRANCE                                                            </option>
+                                                                                                                 <option value="GERMANY">
+                                                             GERMANY                                                            </option>
+                                                                                                                 <option value="HONG KONG">
+                                                             HONG KONG                                                            </option>
+                                                                                                                 <option value="INDONESIA">
+                                                             INDONESIA                                                            </option>
+                                                                                                                 <option value="ITALY">
+                                                             ITALY                                                            </option>
+                                                                                                                 <option value="JAPAN">
+                                                             JAPAN                                                            </option>
+                                                                                                                 <option value="KUWAIT">
+                                                             KUWAIT                                                            </option>
+                                                                                                                 <option value="MALAYSIA">
+                                                             MALAYSIA                                                            </option>
+                                                                                                                 <option value="NETHERLANDS">
+                                                             NETHERLANDS                                                            </option>
+                                                                                                                 <option value="NEW ZEALAND">
+                                                             NEW ZEALAND                                                            </option>
+                                                                                                                 <option value="OMAN">
+                                                             OMAN                                                            </option>
+                                                                                                                 <option value="OTHER">
+                                                             OTHER                                                            </option>
+                                                                                                                 <option value="QATAR">
+                                                             QATAR                                                            </option>
+                                                                                                                 <option value="RUSSIA">
+                                                             RUSSIA                                                            </option>
+                                                                                                                 <option value="SAUDI ARABIA">
+                                                             SAUDI ARABIA                                                            </option>
+                                                                                                                 <option value="SINGAPORE">
+                                                             SINGAPORE                                                            </option>
+                                                                                                                 <option value="SPAIN">
+                                                             SPAIN                                                            </option>
+                                                                                                                 <option value="SWITZERLAND">
+                                                             SWITZERLAND                                                            </option>
+                                                                                                                 <option value="UAE">
+                                                             UAE                                                            </option>
+                                                                                                                 <option value="UK">
+                                                             UK                                                            </option>
+                                                                                                                 <option value="USA">
+                                                             USA                                                            </option>
+                                                                                                         </select>
+                                             </div>
+                                         </div>
+
+                                         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 mprl nriothercountry" style="display:none;">
+                                             <div class="form-group">
+                                                 <label class="control-label"> Country Name </label>
+                                                 <input type="text" class="form-control" maxlength="30" id="co_other_country_0" name="co_other_country_0">
+                                             </div>
+                                         </div>
+
+                                         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                                             <div class="form-group">
+                                                 <label class="control-label">Gender</label>
+                                                 <div class="btn-group w100" data-toggle="buttons">
+                                                     <label class="btn w50 mmr10 active" for="co_gender_m_0">
+                                                         <input type="radio" value="M" name="co_gender_0" checked id="co_gender_m_0" /><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i> <span>  Male </span>
+                                                     </label>
+
+                                                     <label class="btn w50" for="co_gender_f_0">
+                                                         <input type="radio" value="F" name="co_gender_0" id="co_gender_f_0" /><i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i><span> Female</span>
+                                                     </label>
+                                                 </div>
+                                             </div>
+                                         </div>
+
+                                         <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                                             <div class="form-group">
+                                                 <label class="control-label"> Age </label>
+                                                 <input type="text" class="form-control" maxlength="2" id="co_age_0" name="co_age_0">
+                                             </div>
+                                         </div>
+
+                                         <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+                                             <div class="form-group">
+                                                 <label class="control-label" for="co_employment_type_0">Employment Type</label>
+                                                 <select class="form-control coAppEmploymentType" id="co_employment_type_0" name="co_employment_type_0">
+                                                     <option value="">Select</option>
+                                                                                                                 <option value="E">
+                                                             EMPLOYED                                                            </option>
+                                                                                                                 <option value="H">
+                                                             HOUSEWIFE                                                            </option>
+                                                                                                                 <option value="O">
+                                                             RETIRED                                                            </option>
+                                                                                                                 <option value="S">
+                                                             SELF EMPLOYED                                                            </option>
+                                                                                                                 <option value="D">
+                                                             STUDENT                                                            </option>
+                                                                                                         </select>
+                                             </div>
+                                         </div>
+
+                                         <div id="coAppOccHide_0" class="coAppOccHide income_box">
+                                             <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 mpr15 pr">
+                                                 <div class="form-group">
+                                                     <label class="control-label">Monthly Income</label>
+                                                     <input type="text" class="form-control mask-number-input" maxlength="11" id="co_monthly_income_0" name="co_monthly_income_0">
+                                                 </div>
+                                             </div>
+                                             <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 mpr15 pr">
+                                                 <div class="form-group">
+                                                     <label class="control-label">Other EMIs</label>
+                                                     <input type="text" class="form-control mask-number-input" maxlength="11" id="co_current_emi_0" name="co_current_emi_0">
+                                                 </div>
+                                             </div>
+                                             <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
+                                                 <div class="form-group">
+                                                     <label class="control-label">Retiring Age</label>
+                                                     <select class="form-control" id="co_retirement_age_0" name="co_retirement_age_0">
+                                                         <option value="">Select</option>
+                                                                                                                         <option value="55">
+                                                                 55                                                                </option>
+                                                                                                                         <option value="56">
+                                                                 56                                                                </option>
+                                                                                                                         <option value="57">
+                                                                 57                                                                </option>
+                                                                                                                         <option value="58">
+                                                                 58                                                                </option>
+                                                                                                                         <option value="59">
+                                                                 59                                                                </option>
+                                                                                                                         <option value="60">
+                                                                 60                                                                </option>
+                                                                                                                         <option value="61">
+                                                                 61                                                                </option>
+                                                                                                                         <option value="62">
+                                                                 62                                                                </option>
+                                                                                                                         <option value="63">
+                                                                 63                                                                </option>
+                                                                                                                         <option value="64">
+                                                                 64                                                                </option>
+                                                                                                                         <option value="65">
+                                                                 65                                                                </option>
+                                                                                                                 </select>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+
+
+                             </div>
+
+                             <div id="btn-groups-div" class="col-lg-12 col-sm-12 col-md-12 col-xs-12 text-right mt30 mt20">
+                                 <input type="hidden" name="do_what" value="check_eligibility">
+                                 <div class="col-lg-7 col-sm-7 col-md-7 col-xs-12 pr pl">
+
+                                     <div id="addCoAppBtnDiv"> <a href="javascript:void(0);" class="btns btn-default btnAddCoApp w100m"> ADD ANOTHER CO-APPLICANT </a> </div>
+
+
+
+                                 </div>
+
+                                 <div class="col-lg-5 col-sm-5 col-md-5 col-xs-12 pr pl mt15m">
+
+                                     <button class="button_effect btn_1 txt" id="btn-coapp-continue"> <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i> CONTINUE <i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i><i class="fa fa-angle-left"></i></button>
+
+
+                                 </div>
+
+
+
+
+
+
+
+
+                             </div>
+                         </div>
+                     </form>
+                 </div>
+                 <!-- Co app tab end -->
+
+                 <!-- Offer tab start -->
+                 <div id="offerTab" class="tab-pane  ">
+                     <div class="row">
+
+
+                         <div id="OfferSlider">
+
+                         </div>
+
+
+
+                     </div>
+                 </div>
+                 <!-- Offer tab end -->
+
+             </div>
+         </div>
+
+         <div class="text-rights-track"> <a href="index.php" target="_blank">Track your Application</a> </div>
+     </div>
+ </div>
+</div>
+
+<div class="left_matter m_view">
+ <div class="box_add_rate flt_top">
+     <div class="had_rate had_rate_red"> Current Home Loan Interest Rates </div>
+     <div>
+         <div class="had_rate_sec"> For Women* (Upto 75 lakhs) </div>
+         <div class="had_rate_num"> 8.35% to 8.85% </div>
+         <div class="had_rate_sec alt"> For Others* (Upto 75 lakhs) </div>
+         <div class="had_rate_num alt"> 8.40% to 8.90% </div>
+         <div class="had_rate_sec"> For Women* (Above 75 lakhs) </div>
+         <div class="had_rate_num"> 8.40% to 8.90% </div>
+         <div class="had_rate_sec alt"> For Others* (Above 75 lakhs) </div>
+         <div class="had_rate_num alt"> 8.45% to 8.95% </div>
+     </div>
+ </div>
+ <div class="point">
+     <div class="point-head"> Why Choose HDFC Home Loans?  </div>
+     <ul>
+         <li> Attractive interest rates to make your Home Loans affordable and easier on your pocket.  </li>
+         <li> Customized repayment options to suit your needs.  </li>
+         <li> No hidden charges.  </li>
+         <li> Expert legal and technical counseling to help you make the right home buying decision.  </li>
+     </ul>
+ </div>
+</div>
+
+<!-- Signup Modal -->
+<div class="modal fade" id="SignUpModal" role="dialog">
+ <div class="modal-dialog modal-sm">
+     <div class="modal-content">
+
+         <div id="SIGNUP">
+             <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></button>
+                 <h4 class="modal-title"> Sign Up </h4>
+             </div>
+             <div class="modal-body">
+                 <div class="row">
+
+
+                     <div id="signup">
+                         <form name="frmSignUp" id="frmSignUp">
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mprl "> <label class="log_de"> Please sign up to track your application status. </label> </div>
+                             <div class="has-error">
+                                 <div id="signup_error" class="help-block"> </div>
+                             </div>
+
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 ">
+                                 <div class="form-group">
+                                     <label class="control-label">Create User ID</label>
+                                     <input type="text" class="form-control" name="sg_user_id">
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                                 <div class="form-group">
+                                     <label class="control-label">New Password</label>
+                                     <input type="password" class="form-control" name="sg_password" maxlength="15">
+                                 </div>
+                             </div>
+
+                             <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+                                 <div class="form-group">
+                                     <label class="control-label">Confirm Password</label>
+                                     <input type="password" class="form-control" name="sg_confirmPassword" data-fv-identical="true" data-fv-identical-field="sg_password" data-fv-identical-message="The password and its confirm are not the same">
+                                 </div>
+                             </div>
+                             <input type="hidden" name="do_what" value="RegisterUser">
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 text-right mt20">
+                                 <button type="submit" class="btn btn-success"> SIGN UP </button>
+                             </div>
+                         </form>
+                     </div>
+
+
+
+                     <div id="signupotp" style="display:none;">
+                         <form name="frmSignUpOtp" id="frmSignUpOtp">
+                             <div class="mt_20">
+                                 <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10 otp_meg"> Proceed with the OTP received on <span class="bold span_otp_mobile">  </span> and <span class="bold span_otp_email">  </span> </div>
+                             </div>
+                             <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12 mt20 mt_20">
+                                 <div class="input-group">
+                                     <div class="form-group" style="height:auto !important;">
+                                         <input type="text" class="form-control w73" placeholder="OTP" style="float: left;" name="vsg_otp">
+                                         <div class="input-group-btn">
+                                             <button type="submit" class="btn btn-success h34" > SUBMIT </button>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <input type="hidden" name="do_what" value="RegisterUserOtp">
+                                 <div class="otp_sms" id="signup_otp_resend_div"> If OTP is not received, <a href="javascript:void(0);" id="signup_resend_otp">click here</a> to resend </div>
+                                 <div class="otp_sms" id="signup_otp_resend_div_msg" style="display:none;"></div>
+                             </div>
+                         </form>
+                     </div>
+
+                 </div>
+
+
+             </div>
+
+         </div>
+     </div>
+ </div>
+</div>
+<!--- -->
+
+<div class="footer">
+ <div class="footer_div">
+     <span class="Ftext"> Copyright &copy; 2018 HDFC All rights reserved </span>
+     <!--<ul class="footer_ul">
+         <li><a href="https://www.hdfc.com/user-agreement" target="_blank">User Agreement</a></li>
+         <li><a href="https://www.hdfc.com/privacy-policy" target="_blank">Privacy Policy</a></li>
+         <li><a href="https://www.hdfc.com/tnc" target="_blank">Terms & Conditions</a></li>
+         <li><a href="https://www.hdfc.com/disclaimer" target="_blank">Disclaimer</a></li>
+         <li><a href="https://www.hdfc.com/reach-us" target="_blank">Contact Us</a></li>
+     </ul>-->
+ </div>
+</div>
+
+
+</body>
+
+</html> 
+{% endblock %}

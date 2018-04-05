@@ -1,8 +1,53 @@
 {% extends 'base.html' %}
  {% block content %}
-   <h2> welcome {{fullname}} you are logged in!!<h2>
-     <p> click for <a href="/testApp/transaction/">transaction</a></p>
-     <p> click for <a href="/testApp/balance_inq/">balance inquery</a></p>
-     <p> click for <a href="/testApp/history/">Check history</a></p>
-     <p> click <a href="/loginmodule/logout/">here</a> to logout.</p>
+{% load static %}
+<div class="container" style="background-image: url({% static 'loginmodule/images/m1.png'%}); height: 400px; width: 2000px;">
+<div class="container">
+ <div class="carousel carousel-slider">
+  <a class="carousel-item" href="#one!"><img src="{% static 'loginmodule/images/Picture3.png'%}"></a>
+  <a class="carousel-item" href="#two!"><img src="{% static 'loginmodule/images/a.jpg'%}"></a>
+  <a class="carousel-item" href="#three!"><img src="{% static 'loginmodule/images/h.jpg' %}"></a>
+  <a class="carousel-item" href="#four!"><img src="{% static 'loginmodule/images/g.jpg' %}"></a>
+    <a class="carousel-item" href="#five!"><img src="{% static 'loginmodule/images/f.jpg' %}"></a>
+      <a class="carousel-item" href="#five!"><img src="{% static 'loginmodule/images/ok.jpg' %}"></a>
+</div>
+</div></div>
+<div class="card-panel">
+    <span class="red-text text-darken-2"><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      For Your Own Security</h4></span>
+  </div>
+  <div>
+      <span class="blue-text text-darken-2">
+        <h5>Some important instructions.</h5>
+      </span>
+    </div>
+    <div>
+        <span class="green-text text-darken-2">
+        <h6>->always keep your computer free from malware.<br>->always change your password periodicaly.<br>-> Never respond to any communication
+seeking your passwords.<br>->Never reveal your passwords or
+card details to anyone.<br></h6>
+  </h6></span>
+    </div>
+  <div class>
+      <span class="blue-text text-darken-2"><h5>*Please ensure the following before logging into Online Banking </h5></span>
+    </div>
+    <div class>
+        <span class="green-text text-darken-2">
+ <h6>->please do not share your user name and password.
+ <h6>->The URL in your browser address bar begins with "https".</h6>
+ <h6>->The address or status bar displays the padlock symbol.</h6>
+ <h6>->Click the padlock to view and verify the security certificate.</h6>
+ <h6>->The address bar turns green indicating that the site is secured with
+      an SSL Certificate that meets the Extended Validation Standard. (SSL
+      is compatible for IE 7.0 and above, Mozilla Firefox 3.1 and above,
+      Opera 9.5 and above, Safari 3.5 and above, Google Chrome).</h6>
+    </span></div>
+    <div>
+        <span class="blue-text text-darken-2"><h5>*Beware of Phishing attacks </h5></span>
+      </div>
+      <div>
+          <span class="green-text text-darken-2">
+      <h6>->Phishing is a fraudulent attempt, usually made through email, phone calls, SMS etc seeking your personal and confidential information.
+      <br>->State Bank or any of its representative never sends you email/SMS or calls you over phone to get your personal information,password or one time SMS (high security) password. Any such e-mail/SMS or phone call is an attempt to fraudulently withdraw money from your account through Internet Banking. Never respond to such email/SMS or phone call. Please report immediately on report.phishing@sbi.co.in if you receive any such email/SMS or Phone call. Please lock your user access immediately, if you have accidentally revealed your credentials.Click here to lock.
+    </h6>  </span></div>
  {% endblock %}

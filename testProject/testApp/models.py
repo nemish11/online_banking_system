@@ -13,7 +13,7 @@ class Login(models.Model):
 class Bank_account(models.Model):
 	account_no = models.CharField(max_length=20)
 	name = models.CharField(max_length=30)
-	amount = models.IntegerField(max_length=20)
+	amount = models.IntegerField()
 	user_id = models.CharField(max_length=20)
 	password = models.CharField(max_length=20)
 	phone_no = models.CharField(max_length=20)
@@ -24,3 +24,10 @@ class History(models.Model):
 	to_account_no = models.CharField(max_length=20)
 	amount_transfer = models.CharField(max_length=20)
 	time = models.DateTimeField('date published')
+
+#class Loan(models.Model):
+	#loan type
+	#loan interest rate
+	#loan amount
+	#loan iniciate time fu
+	#loan

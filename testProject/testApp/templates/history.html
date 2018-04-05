@@ -1,23 +1,47 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>welcome {{request.session.username}}!!
-      this is your history</h1>
+    <h1>Welcome {{request.session.username}}!<h1>
+      <h4>This Is Your History<h4>
     {% if history_table %}
     <ul>
+
+<table class="bordered">
+        <thead>
+          <tr>
+              <th>your account to</th>
+              <th> other account </th>
+              <th>amount transfer</th>
+              <th> date and time</th>
+          </tr>
+        </thead>
       {% for uname in bank_table %}
           {% ifequal uname.user_id request.session.username %}
              {%  for ac_no in history_table %}
                 {% ifequal uname.account_no ac_no.from_account_no %}
-                 {{ac_no.from_account_no}}--> {{ac_no.to_account_no}}     {{ ac_no.amount_transfer}}   {{ac_no.time}}</br>
+                <tbody>
+                  <tr>
+                    <td>{{ac_no.from_account_no}}</td>
+                    <td>{{ac_no.to_account_no}}  </td>
+                    <td>{{ ac_no.amount_transfer}}</td>
+                    <td>{{ac_no.time}}</td>
+                  </tr>
+                </tbody>
                  {% endifequal %}
                  {% ifequal uname.account_no ac_no.to_account_no %}
-                  {{ac_no.from_account_no}}--> {{ac_no.to_account_no}}    {{ ac_no.amount_transfer}}   {{ac_no.time}}</br>
+                 <tbody>
+                   <tr>
+                     <td>{{ac_no.to_account_no}}</td>
+                     <td>{{ac_no.from_account_no}}  </td>
+                     <td>{{ ac_no.amount_transfer}}</td>
+                     <td>{{ac_no.time}}</td>
+                   </tr>
+                 </tbody>
                   {% endifequal %}
             {% endfor %}
             {% endifequal %}
-
       {% endfor %}
+    </table>
       <br>
     </ul>
     {% else %}

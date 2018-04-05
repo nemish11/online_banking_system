@@ -26,6 +26,7 @@ SECRET_KEY = 'hai%5^@0(hjkez5rqyg-%l)1lzyvdp3)2-ef4dgrtk@*x38rdh'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+STATICFILES_DIRS = [os.path.join (BASE_DIR,"loginmodule/static"), os.path.join (BASE_DIR,"testApp/static")]
 
 
 # Application definition
@@ -121,5 +122,4 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
 STATIC_URL = '/static/'
