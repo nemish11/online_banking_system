@@ -6,18 +6,27 @@ from testApp.models import Bank_account,History
 from django.template.context_processors import csrf
 from django.views import generic
 from datetime import datetime
+from django.contrib.auth.decorators import login_required
+
 class HomePageView(TemplateView):
 	def get(self,request,**kwargs):
 		return render(request,'transaction.html',context=None)
 
-class Bank_account_view(generic.ListView):
-	model=Bank_account
-	template_name='transaction.html'
+@login_required(login_url="/loginmodule/login/")
+def bank_account(request):
+	bank_account_list=Bank_account.objects.all()
+	c={}
+	c['bank_account_list']=bank_account_list
+	return render(request,'transaction.html',c)
 
-class balance_inq_view(generic.ListView):
-	model=Bank_account
-	template_name='balance_inq.html'
+@login_required(login_url="/loginmodule/login/")
+def balance_inq(request):
+	bank_account_list=Bank_account.objects.all()
+	c={}
+	c['bank_account_list']=bank_account_list
+	return render(request,'balance_inq.html',c)
 
+@login_required(login_url="/loginmodule/login/")
 def history(request):
 	bank_table=Bank_account.objects.all()
 	history_table=History.objects.all()
@@ -26,6 +35,7 @@ def history(request):
 	c['history_table']=history_table
 	return render(request,'history.html',c)
 
+@login_required(login_url="/loginmodule/login/")
 def do_transaction(request):
 	if(request.POST.get('amount1','')=='' or request.POST.get('from_account','')==''):
 		return render_to_response('invalid_account_no.html')
@@ -58,22 +68,38 @@ def do_transaction(request):
 	from_ac.save()
 	return HttpResponseRedirect('transaction_success')
 
+@login_required(login_url="/loginmodule/login/")
 def process_loan(request):
 	return render_to_response('transaction_success.html')
 
+@login_required(login_url="/loginmodule/login/")
 def transaction_success(request):
 	return render_to_response('transaction_success.html')
+
+@login_required(login_url="/loginmodule/login/")
 def insufficient_bal(request):
 	return render_to_response('insufficient_bal.html')
+
+@login_required(login_url="/loginmodule/login/")
 def invalid_amount(request):
 	return render_to_response('invalid_amount.html')
+
+@login_required(login_url="/loginmodule/login/")
 def invalid_account_no(request):
 	template_name='invalid_account_no'
 	return render_to_response('invalid_account_no.html')
-class profile_view(generic.ListView):
-	template_name='view_profile.html'
-	model=Bank_account
+
+@login_required(login_url="/loginmodule/login/")
+def profile(request):
+	bank_account_list=Bank_account.objects.all()
+	c={}
+	c['bank_account_list']=bank_account_list
+	return render(request,'view_profile.html',c)
+
+@login_required(login_url="/loginmodule/login/")
 def loan(request):
 	return render(request,'loan.html')
+
+@login_required(login_url="/loginmodule/login/")
 def testView(request):
 	return render(request, 'loginmodule/login.html')

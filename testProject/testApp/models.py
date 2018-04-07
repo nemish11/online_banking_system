@@ -8,7 +8,6 @@ class Login(models.Model):
 	account_no = models.CharField(max_length=20)
 	user_id = models.CharField(max_length=20)
 	password = models.CharField(max_length=20)
-	#username = models.OneToOneField(User,on_delete=models.CASCADE)
 
 class Bank_account(models.Model):
 	account_no = models.CharField(max_length=20)
@@ -24,10 +23,3 @@ class History(models.Model):
 	to_account_no = models.CharField(max_length=20)
 	amount_transfer = models.CharField(max_length=20)
 	time = models.DateTimeField('date published')
-
-#class Loan(models.Model):
-	#loan type
-	#loan interest rate
-	#loan amount
-	#loan iniciate time fu
-	#loan

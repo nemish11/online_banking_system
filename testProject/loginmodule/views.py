@@ -4,11 +4,16 @@ from django.views.generic import TemplateView
 from django.http import HttpResponseRedirect
 from django.contrib import auth
 from django.template.context_processors import csrf
-# Create your views here.
+from testApp.models import Bank_account
+from django.contrib.auth.decorators import login_required
+
+
 def login(request):
-    c={}
-    c.update(csrf(request))
-    return render_to_response('login.html',c)
+    if not request.user.is_authenticated:
+        c={}
+        c.update(csrf(request))
+        return render_to_response('login.html',c)
+    return HttpResponseRedirect('/loginmodule/loggedin/')
 def auth_view(request):
     username=request.POST.get('username','')
     password=request.POST.get('password','')
@@ -16,14 +21,22 @@ def auth_view(request):
     if user is not None:
         auth.login(request,user)
         request.session['username']=username
-        return HttpResponseRedirect('/loginmodule/loggedin/')
+        b=Bank_account.objects.all()
+        for user in b:
+            if user.user_id==username:
+                return HttpResponseRedirect('/loginmodule/loggedin/')
+        c={}
+        c['msg']='Invalid username or password'
+        return render(request,'login.html',c)
     else:
         c={}
         c['msg']='Invalid username or password'
         return render(request,'login.html',c)
 
+@login_required(login_url="/loginmodule/login/")
 def loggedin(request):
     return render_to_response('loggedin.html',{"full_name":request.user.username})
+
 def invalidlogin(request):
     c={}
     c['msg']='Invalid username or password'
@@ -31,7 +44,10 @@ def invalidlogin(request):
 def logout(request):
     c={}
     c['msg']='you are Loggedout'
+    if request.user.is_authenticated:
+        auth.logout(request)
     return render(request,'login.html',c)
+
 def about_us(request):
     return render_to_response('about_us.html')
 def FAQ(request):

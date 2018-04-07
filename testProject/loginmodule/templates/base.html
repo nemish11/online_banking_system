@@ -6,7 +6,7 @@
 	<script src="{% static 'js/jquery-3.3.1.min.js' %}" ></script>
 	<link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}" >
 	<script src="{% static 'js/materialize.min.js' %}" ></script>
-
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<script src="{% static 'js/script.js' %}" ></script>
 	<style>
 body {
@@ -18,8 +18,17 @@ body {
 <body>
 	<nav>
 		<div class="nav-wrapper teal">
-			<a href="/loginmodule/loggedin/" class="brand-logo">Bank</a>
+			<a href="/loginmodule/loggedin/" class="brand-logo">Home</a>
+			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="/testApp/profile/">Profile</a></li>
+				<li><a href="/testApp/transaction/">Transaction</a></li>
+				<li><a href="/testApp/balance_inq/">Balance</a></li>
+				<li><a href="/testApp/history/">History</a></li>
+				<li><a href="/testApp/loan/">Loan</a></li>
+				<li><a href="/loginmodule/logout/">Log out</a></li>
+			</ul>
+			<ul class="side-nav" id="mobile-demo">
 				<li><a href="/testApp/profile/">Profile</a></li>
 				<li><a href="/testApp/transaction/">Transaction</a></li>
 				<li><a href="/testApp/balance_inq/">Balance</a></li>
@@ -29,7 +38,8 @@ body {
 			</ul>
 		</div>
 	</nav>
-
+	<div class="container center-align">
 	{% block content %}{% endblock %}
+	</div>
 </body>
 </html>
