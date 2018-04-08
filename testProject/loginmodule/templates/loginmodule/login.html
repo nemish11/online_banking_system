@@ -17,8 +17,30 @@
 	</head>
 
 	<body>
+    <nav>
+
+		<div class="nav-wrapper teal">
+			<a href="#" class="brand-logo">Online Banking</a>
+			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+  				<li><a href="#">Home</a></li>
+  				<li><a href="https://retail.onlinesbi.com/sbijava/retail/html/aboutus.html">News</a></li>
+  				<li><a href="/loginmodule/contact_us/">Contact us</a></li>
+  				<li><a href="/loginmodule/about_us/">About us</a></li>
+  				<li><a href="https://retail.onlinesbi.com/personal/faq.html">FAQ</a></li>
+  			</ul>
+			<ul class="side-nav" id="mobile-demo">
+				<li><a href="#">Home</a></li>
+  				<li><a href="https://retail.onlinesbi.com/sbijava/retail/html/aboutus.html">News</a></li>
+  				<li><a href="/loginmodule/contact_us/">Contact us</a></li>
+  				<li><a href="/loginmodule/about_us/">About us</a></li>
+  				<li><a href="https://retail.onlinesbi.com/personal/faq.html">FAQ</a></li>
+			</ul>
+		</div>
+  	</nav>
     <div class="container center-align">
       <h1>Login</h1>
+       <h5>{{msg}}</h5>
 			<div class="row">
 				<form action="/loginmodule/auth/" method="POST" class="col s12">{% csrf_token %}
 					<div class="row">

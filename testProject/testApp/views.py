@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import login_required
 
 class HomePageView(TemplateView):
 	def get(self,request,**kwargs):
-		return render(request,'transaction.html',context=None)
+		return render(request,'loginmodule/login.html',context=None)
 
 @login_required(login_url="/loginmodule/login/")
 def bank_account(request):
@@ -49,6 +49,11 @@ def do_transaction(request):
 				if(datetime.now().month==cur.time.month):
 					sum+=int(cur.amount_transfer)
 	amount1=request.POST.get('amount1','')
+	ac1=request.POST.get('from_account','')
+	if (not amount1.isdigit()):
+		return HttpResponseRedirect('invalid_amount')
+	if(not ac1.isdigit()):
+		return render_to_response('invalid_account_no.html')
 	sum+=int(amount1)
 	if(int(sum)>50000):
 		return render_to_response('limit_exceed.html')
@@ -102,4 +107,5 @@ def loan(request):
 
 @login_required(login_url="/loginmodule/login/")
 def testView(request):
+	print('hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii')
 	return render(request, 'loginmodule/login.html')

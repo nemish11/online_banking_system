@@ -1,6 +1,7 @@
 #
 from django.conf.urls import url
 from testApp.views import bank_account,balance_inq,do_transaction,transaction_success,insufficient_bal,invalid_amount,invalid_account_no,history,process_loan,profile,loan, testView
+from loginmodule.views import login
 from testApp import views
 from . import views
 urlpatterns=[
@@ -17,4 +18,5 @@ urlpatterns=[
 	url(r'profile/$',profile),
 	url(r'loan/$',loan),
 	url(r'test/$', testView),
+	url(r'^$',login),
 ]

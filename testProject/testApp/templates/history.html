@@ -5,12 +5,12 @@
       <h4>This Is Your History<h4>
     {% if history_table %}
     <ul>
-
+<h5>Money Sent:</h5>
 <table class="bordered">
         <thead>
           <tr>
-              <th>your account to</th>
-              <th> other account </th>
+              <th>From</th>
+              <th>To</th>
               <th>amount transfer</th>
               <th> date and time</th>
           </tr>
@@ -28,20 +28,38 @@
                   </tr>
                 </tbody>
                  {% endifequal %}
-                 {% ifequal uname.account_no ac_no.to_account_no %}
-                 <tbody>
-                   <tr>
-                     <td>{{ac_no.to_account_no}}</td>
-                     <td>{{ac_no.from_account_no}}  </td>
-                     <td>{{ ac_no.amount_transfer}}</td>
-                     <td>{{ac_no.time}}</td>
-                   </tr>
-                 </tbody>
-                  {% endifequal %}
             {% endfor %}
             {% endifequal %}
       {% endfor %}
     </table>
+    <br>
+<h5>Money Received:</h5>
+    <table class="bordered">
+            <thead>
+              <tr>
+                  <th>From</th>
+                  <th>To</th>
+                  <th>amount transfer</th>
+                  <th> date and time</th>
+              </tr>
+            </thead>
+          {% for uname in bank_table %}
+              {% ifequal uname.user_id request.session.username %}
+                 {%  for ac_no in history_table %}
+                    {% ifequal uname.account_no ac_no.to_account_no %}
+                    <tbody>
+                      <tr>
+                        <td>{{ac_no.from_account_no}}</td>
+                        <td>{{ac_no.to_account_no}}  </td>
+                        <td>{{ ac_no.amount_transfer}}</td>
+                        <td>{{ac_no.time}}</td>
+                      </tr>
+                    </tbody>
+                     {% endifequal %}
+                {% endfor %}
+                {% endifequal %}
+          {% endfor %}
+        </table>
       <br>
     </ul>
     {% else %}
