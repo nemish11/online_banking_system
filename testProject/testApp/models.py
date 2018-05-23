@@ -1,8 +1,10 @@
 from django.db import models
 #from django.contrib.auth.models import User
 # Create your models here.
-class Student(models.Model):
-	student_name = models.CharField(max_length=20)
+
+class Feedback(models.Model):
+	user_id = models.CharField(max_length=20)
+	description=models.TextField(max_length=100)
 
 class Login(models.Model):
 	account_no = models.CharField(max_length=20)

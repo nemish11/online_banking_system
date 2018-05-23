@@ -1,9 +1,47 @@
+{% load static %}
+
 <html>
-    <head>
-       <title> about us
-       </title>
-    </head>
-    <body>
-        we are computer engineering student!!!
+	<head>
+		<title>{% block title %} {% endblock %}</title>
+		<!--<link rel="icon" href="imageset/favicon.png">-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link rel="stylesheet" href="{% static "css/materialize.min.css" %}">
+		<!--<link rel="stylesheet" href="{% static "css/style.css" %}">-->
+		<script src="{% static "js/jquery-3.3.1.min.js" %}"></script>
+		<script src="{% static "js/materialize.min.js" %}"></script>
+
+		<script src="{% static "js/script.js" %}"></script>
+	</head>
+
+	<body>
+    <nav>
+
+		<div class="nav-wrapper teal">
+			<a href="/loginmodule/login/" class="brand-logo">Online Banking</a>
+			<a href="/loginmodule/login/" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+  				<li><a href="/loginmodule/login/">Home</a></li>
+  				<li><a href="https://retail.onlinesbi.com/sbijava/retail/html/aboutus.html">News</a></li>
+  				<li><a href="/loginmodule/contact_us/">Contact us</a></li>
+  				<li><a href="/loginmodule/about_us/">About us</a></li>
+  				<li><a href="https://retail.onlinesbi.com/personal/faq.html">FAQ</a></li>
+  			</ul>
+			<ul class="side-nav" id="mobile-demo">
+				<li><a href="/loginmodule/login/">Home</a></li>
+  				<li><a href="https://retail.onlinesbi.com/sbijava/retail/html/aboutus.html">News</a></li>
+  				<li><a href="/loginmodule/contact_us/">Contact us</a></li>
+  				<li><a href="/loginmodule/about_us/">About us</a></li>
+  				<li><a href="https://retail.onlinesbi.com/personal/faq.html">FAQ</a></li>
+			</ul>
+		</div>
+  	</nav>
+        i am computer engineering student at @ddu<br>
+        address: Dharmsinh desai university,nadiad<br>
+        pincode:387001<br>
+        mobile num:9876567890<br>
+        email:contactus345@gmail.com
     </body>
-</html>
+    </html>

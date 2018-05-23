@@ -2,7 +2,7 @@ from django.shortcuts import render, render_to_response
 from django.views.generic import TemplateView
 from django.views import generic
 from django.http import HttpResponseRedirect
-from testApp.models import Bank_account,History
+from testApp.models import Bank_account,History,Feedback
 from django.template.context_processors import csrf
 from django.views import generic
 from datetime import datetime
@@ -31,6 +31,7 @@ def history(request):
 	bank_table=Bank_account.objects.all()
 	history_table=History.objects.all()
 	c={}
+	bank_account_list=Bank_account.objects.all()
 	c['bank_table']=bank_table
 	c['history_table']=history_table
 	return render(request,'history.html',c)
@@ -38,7 +39,11 @@ def history(request):
 @login_required(login_url="/loginmodule/login/")
 def do_transaction(request):
 	if(request.POST.get('amount1','')=='' or request.POST.get('from_account','')==''):
-		return render_to_response('invalid_account_no.html')
+		c={}
+		bank_account_list=Bank_account.objects.all()
+		c['bank_account_list']=bank_account_list
+		c['msg']="Invalid account no...please try again."
+		return render(request,'transaction.html',c)
 	from_ac=Bank_account.objects.get(user_id=request.session.get('username'))
 	sum=0
 	sum=int(sum)
@@ -51,48 +56,55 @@ def do_transaction(request):
 	amount1=request.POST.get('amount1','')
 	ac1=request.POST.get('from_account','')
 	if (not amount1.isdigit()):
-		return HttpResponseRedirect('invalid_amount')
+		c={}
+		bank_account_list=Bank_account.objects.all()
+		c['bank_account_list']=bank_account_list
+		c['msg']="Invalid amount...please enter a correct amount."
+		return render(request,'transaction.html',c)
 	if(not ac1.isdigit()):
-		return render_to_response('invalid_account_no.html')
+		c={}
+		bank_account_list=Bank_account.objects.all()
+		c['bank_account_list']=bank_account_list
+		c['msg']="Invalid account no....enter correct account number"
+		return render(request,'transaction.html',c)
 	sum+=int(amount1)
 	if(int(sum)>50000):
-		return render_to_response('limit_exceed.html')
+		c={}
+		bank_account_list=Bank_account.objects.all()
+		c['bank_account_list']=bank_account_list
+		c['msg']="Your monthly limit exceed ...please try after month"
+		return render(request,'transaction.html',c)
 	try:
 		to_ac=Bank_account.objects.get(account_no=request.POST.get('from_account',''))
 	except:
-		return render_to_response('invalid_account_no.html')
+		c={}
+		bank_account_list=Bank_account.objects.all()
+		c['bank_account_list']=bank_account_list
+		c['msg']="Invalid account no....enter correct account number"
+		return render(request,'transaction.html',c)
 	if(int(amount1)<0):
-		return HttpResponseRedirect('invalid_amount')
+		c={}
+		bank_account_list=Bank_account.objects.all()
+		c['bank_account_list']=bank_account_list
+		c['msg']="Invalid amount...please enter a correct amount."
+		return render(request,'transaction.html',c)
 	if(from_ac.amount<int(amount1)):
-		return HttpResponseRedirect('insufficient_bal')
+		c={}
+		bank_account_list=Bank_account.objects.all()
+		c['bank_account_list']=bank_account_list
+		c['msg']="Insufficient balance..."
+		return render(request,'transaction.html',c)
 	from_ac.amount-=int(amount1)
 	to_ac.amount+=int(amount1)
 	h=History(from_account_no=from_ac.account_no,to_account_no=to_ac.account_no,amount_transfer=amount1,time=datetime.now())
 	h.save()
 	to_ac.save()
 	from_ac.save()
-	return HttpResponseRedirect('transaction_success')
-
-@login_required(login_url="/loginmodule/login/")
-def process_loan(request):
-	return render_to_response('transaction_success.html')
-
-@login_required(login_url="/loginmodule/login/")
-def transaction_success(request):
-	return render_to_response('transaction_success.html')
-
-@login_required(login_url="/loginmodule/login/")
-def insufficient_bal(request):
-	return render_to_response('insufficient_bal.html')
-
-@login_required(login_url="/loginmodule/login/")
-def invalid_amount(request):
-	return render_to_response('invalid_amount.html')
-
-@login_required(login_url="/loginmodule/login/")
-def invalid_account_no(request):
-	template_name='invalid_account_no'
-	return render_to_response('invalid_account_no.html')
+	bank_account_list=Bank_account.objects.all()
+	c={}
+	c['bank_account_list']=bank_account_list
+	c['msg']="thank you.. Your transaction successful"
+	return render(request,'transaction.html',c)
 
 @login_required(login_url="/loginmodule/login/")
 def profile(request):
@@ -107,5 +119,18 @@ def loan(request):
 
 @login_required(login_url="/loginmodule/login/")
 def testView(request):
-	print('hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii')
 	return render(request, 'loginmodule/login.html')
+
+@login_required(login_url="/loginmodule/login/")
+def process_feedback(request):
+	user_id=request.session.get('username')
+	description=request.POST.get('feedback','')
+	h=Feedback(user_id=user_id,description=description)
+	h.save()
+	c={}
+	c['msg']="thank for giving feedback"
+	return render(request,'notification.html',c)
+
+@login_required(login_url="/loginmodule/login/")
+def feedback(request):
+	return render(request,'feedback.html')

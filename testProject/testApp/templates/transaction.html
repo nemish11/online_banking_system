@@ -2,6 +2,9 @@
 
 {% block content %}
    <h4>welcome {{request.session.username}}</h4>
+   <div>
+     <span class="red-text text-darken-2"><h5> {{msg}}</h5></span>
+     </div>
     {% if bank_account_list %}
     <ul>
       {% for uname in bank_account_list %}
@@ -11,9 +14,9 @@
       {% endfor %}
 
       <form action="/testApp/do_transaction" method="POST">{% csrf_token %}
-          <h5>To Account Number:</h5><input type="text" name="from_account"/>
+          <h5>To Account Number:</h5><input type="text" name="from_account" placeholder="account number" required/>
         <h5>Enter a Amount:</h5>
-        <input type="text" name="amount1"/>
+        <input type="text" name="amount1" placeholder="amount" required/>
         <input type="submit" value="submit" class="btn"/>
       </form>
     </ul>

@@ -49,8 +49,8 @@ def logout(request):
     return render(request,'login.html',c)
 
 def about_us(request):
-    return render_to_response('about_us.html')
+    return render(request,'about_us.html')
 def FAQ(request):
-    return render_to_response('FAQ.html')
+    return render(request,'FAQ.html')
 def contact_us(request):
-    return render_to_response('contact_us.html')
+    return render(request,'contact_us.html')
